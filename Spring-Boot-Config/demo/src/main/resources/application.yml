@@ -1,0 +1,13 @@
+
+#http://www.iocoder.cn/Spring-Boot/battcn/v2-config-properties/
+
+#自定义属性配置
+my1:
+  age: 22
+  name: alex
+
+#多环境切换配置　不开启
+spring:
+  profiles:
+    active:
+      - false

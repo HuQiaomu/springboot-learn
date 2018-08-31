@@ -1,0 +1,7 @@
+
+#自定义文件配置
+my2:
+  age: 26
+  name: alex hu
+  desc: name is ${name}, age is ${age}
+  javaHome: java home is ${JAVA_HOME:null} # null 取不到　JAVA_HOME 时的默认值
