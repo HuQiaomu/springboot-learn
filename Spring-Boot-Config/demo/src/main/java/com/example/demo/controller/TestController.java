@@ -8,6 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 
 /**
  * @author alex_hu
@@ -24,8 +28,13 @@ public class TestController {
     @Autowired
     private MyProperty2 myProperty2;
 
+    @Resource
+    private HttpServletRequest httpServletRequest;
+
     @GetMapping("/1")
     public MyProperty1 myProperty1() {
+        HttpSession session = httpServletRequest.getSession();
+        log.info("session id: " + session.getId());
         log.info("==================================================");
         log.info(myProperty1.toString());
         log.info("==================================================");
