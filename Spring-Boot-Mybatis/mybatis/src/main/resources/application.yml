@@ -1,0 +1,38 @@
+#
+#spring.datasource.driver-class-name = org.postgresql.Driver
+#spring.datasource.url = jdbc:postgresql://localhost:5432/test
+#spring.username = postgres
+#spring.password = admin
+#
+#mybatis.mapper-locations = classpath:mybatis/mapper/*.xml
+#mybatis.type-aliases-package =com.example.demo.entity
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: admin
+
+mybatis:
+  mapper-locations:
+    - classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.example.demo.entity
+
+
+###　通用 Mapper
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.BaseMapper
+  not-empty: true  # 设置 insert update 中,　是否判断字符串类型 != ''
+
+
+### 分页插件配置
+pagehelper:
+  helper-dialect: postgresql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+
