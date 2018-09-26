@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function getWebSocket() {
+        var webSocket = new WebSocket('ws://localhost:8080/chat');
+
+        webSocket.onopen = function (event) {
+            console.log('WebSocket open');
+        };
+
+        webSocket.onmessage = function (event) {
+            console.log('WebSocket onmessage ', event.data);
+        };
+
+        webSocket.onclose = function (event) {
+            console.log('WebSocket onclose');
+        };
+
+        webSocket.onerror = function (event) {
+            console.log('WebSocket onerror');
+        };
+
+        return webSocket;
+    }
+
+    var webSocket = null;
+
+    function openWebSocket() {
+        webSocket = getWebSocket();
+    }
+
+    function sendMsgToServer(msg) {
+        if (webSocket == null) {
+            alert('连接已断开');
+        }
+        if (msg) {
+            webSocket.send(msg);
+        }
+    }
+
+    function closeWebSocket() {
+        webSocket.close();
+        webSocket = null;
+    }
+
+    function sendClick() {
+        sendMsgToServer(JSON.stringify({username: 'alex', msg: document.getElementsByName('msg')[0].value}));
+    }
+
+</script>
+<body>
+    <section>
+        <button onclick="openWebSocket()">连接</button>
+        <button onclick="closeWebSocket()">断开</button><br>
+    </section>
+    <section>
+        <input name="msg" type="text">
+        <button name="send" onclick="sendClick()">send</button>
+    </section>
+</body>
+</html>
