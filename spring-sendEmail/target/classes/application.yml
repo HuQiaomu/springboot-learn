@@ -1,0 +1,15 @@
+
+#sendEmail config
+spring:
+  mail:
+    host: tpma2001.wistronits.com
+    port: 25
+    username: alex_hu@wistronits.com
+    password: wh20150705!
+    default-encoding: UTF-8
+
+#自定义 以谁来发送邮件
+mail:
+  fromMail:
+    addr: no_reply@wistronits.com
+
