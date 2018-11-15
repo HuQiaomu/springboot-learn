@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>9.6.6</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="exo">
+      <ObjectId>16403</ObjectId>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12401</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="test">
+      <ObjectId>16393</ObjectId>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>106</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="5" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="7" parent="4" name="information_schema">
+      <ObjectId>12113</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="8" parent="4" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="9" parent="4" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="10" parent="4" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="11" parent="4" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="12" parent="4" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-11-07.15:32:11.461</IntrospectionTimestamp>
+      <IntrospectionStateNumber>579</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="13" parent="4" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="14" parent="4" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="15" parent="4" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="16" parent="4" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="17" parent="4" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="18" parent="4" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="19" parent="12" name="user_roles_id_seq">
+      <ObjectId>16893</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>574</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="20" parent="12" name="roles_permissions_id_seq">
+      <ObjectId>16885</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>571</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <sequence id="21" parent="12" name="users_id_seq">
+      <ObjectId>16877</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>566</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+    </sequence>
+    <table id="22" parent="12" name="roles_permissions">
+      <ObjectId>16887</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>579</StateNumber>
+    </table>
+    <table id="23" parent="12" name="user_roles">
+      <ObjectId>16895</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>574</StateNumber>
+    </table>
+    <table id="24" parent="12" name="users">
+      <ObjectId>16879</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>569</StateNumber>
+    </table>
+    <column id="25" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>571</StateNumber>
+      <DefaultExpression>nextval(&apos;roles_permissions_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>roles_permissions_id_seq</SequenceName>
+    </column>
+    <column id="26" parent="22" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>579</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="27" parent="22" name="permission">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>571</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="28" parent="22" name="roles_permissions_pkey">
+      <ObjectId>16891</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="22" name="roles_permissions_pkey">
+      <ObjectId>16892</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>roles_permissions_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>574</StateNumber>
+      <DefaultExpression>nextval(&apos;user_roles_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>user_roles_id_seq</SequenceName>
+    </column>
+    <column id="31" parent="23" name="username">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>574</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="32" parent="23" name="role_name">
+      <Position>3</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>574</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="33" parent="23" name="user_roles_pkey">
+      <ObjectId>16899</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="23" name="user_roles_pkey">
+      <ObjectId>16900</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>user_roles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>566</StateNumber>
+      <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>users_id_seq</SequenceName>
+    </column>
+    <column id="36" parent="24" name="username">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>566</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="24" name="password">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>569</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="38" parent="24" name="users_pkey">
+      <ObjectId>16883</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="24" name="users_pkey">
+      <ObjectId>16884</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
