@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  # activemq 开启 publish/subscribe
+  jms:
+    pub-sub-domain: true
+
+#  servlet:
+  ##    context-path: /test
+
+#语言环境
+language: en_US
