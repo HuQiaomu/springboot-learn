@@ -1,18 +1,18 @@
-package com.alex.springboottomcat.controller;
+package com.alex.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wh1507006
- * @date 2018/11/5 16:43
+ * @date 2019/5/31 9:49
  */
 @RestController
-public class HelloController {
+public class TestController {
 
     @GetMapping("/")
-    public String hello() {
-        return "hello, springboot tomcat";
+    public String index() {
+        return "springboot 使用外部 tomcat 部署实例。";
     }
 
 }
